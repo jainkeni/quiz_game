@@ -1,0 +1,11 @@
+/* Loader.css */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+    background-color: #fff; /* Background color of the loader container */
+  }
+  
+  /* Add styles for the loader image if necessary */
+   

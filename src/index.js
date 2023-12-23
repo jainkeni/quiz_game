@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+// index.js
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Loader from './Loader';
+import './index.css';
+import QuizApp from './Quiz';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const Root = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time (replace with your actual data loading logic)
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Simulating a 2-second loading time
+
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  return (
+    <React.StrictMode>
+      {loading ? <Loader /> : <App />}
+      <QuizApp/>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(
+  <Root />,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

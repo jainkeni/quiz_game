@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React from 'react';
+import HomePage from './Homepage';
+import './App.css'; // Import your CSS file for styling
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <nav>
+          <ul className="navbar">
+            <li className='quiz-app'>Quiz Web Application</li>
+            <div className='inner-nav'>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            </div>
+          </ul>
+        </nav>
       </header>
+
+      <div className="content-section">
+        <HomePage />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

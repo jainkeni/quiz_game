@@ -1,0 +1,16 @@
+.home-section {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(248, 251, 250);
+    text-align: left;
+    font-size: 55px;
+    max-height: 50vh; 
+    max-width: 50vh;
+    margin-left: 4cm;
+    margin-top: 2cm;
+  }
+
+
+.home-image{
+    margin-left: 21cm;
+   margin-top: -7cm;
+}
